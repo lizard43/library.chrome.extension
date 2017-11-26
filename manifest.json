@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Library Search",
+    "description": "Searches library for highlighted words on web page",
+    "version": "0.1",
+    "icons": {
+        "16": "search.png"
+    },
+    "permissions": [
+        "contextMenus"
+    ],
+    "background": {
+        "scripts": [
+            "content.js"
+        ]
+    }
+}
