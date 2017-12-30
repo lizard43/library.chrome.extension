@@ -9,9 +9,15 @@
     "permissions": [
         "contextMenus"
     ],
-    "background": {
-        "scripts": [
-            "content.js"
-        ]
-    }
+   "background": {
+       "scripts": ["content.js"]
+    },    
+    "content_scripts": [
+        {
+          "matches": [
+            "https://www.amazon.com/*"
+          ],
+          "js": ["content.js"]
+        }
+      ]
 }

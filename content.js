@@ -19,14 +19,16 @@ function onClick(info, tab) {
         chrome.tabs.create({ url: eBookUrl});        
     }
   }
-  
-  // Create one test item for each context type.
-//   var contexts = ["page","selection","link","editable","image","video","audio"];
-  var contexts = ["selection"];
-  for (var i = 0; i < contexts.length; i++) {
-    var context = contexts[i];
+ 
+ window.onload = function(e) {   
+    // Create one test item for each context type.
+    //   var contexts = ["page","selection","link","editable","image","video","audio"];
+     var contexts = ["selection"];
+     for (var i = 0; i < contexts.length; i++) {
+       var context = contexts[i];
 
-    var title = "Search Library for \"%s\"";
-    var id = chrome.contextMenus.create({"title": title, "contexts":[context],
-                                         "onclick": onClick});
+       var title = "Search Library for \"%s\"";
+       var id = chrome.contextMenus.create({"title": title, "contexts":[context],
+                                            "onclick": onClick});
+    }
   }
